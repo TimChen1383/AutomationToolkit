@@ -44,6 +44,46 @@ void UAutomationAssetAction::DuplicateAssets(int32 NumberOfDuplicate)
 	}
 }
 
+void UAutomationAssetAction::AddPrefixes()
+{
+	TArray<UObject*> SelectedObjects = UEditorUtilityLibrary::GetSelectedAssets();
+	uint32 Counter = 0;
+	
+	for (UObject* SelectedObject : SelectedObjects)
+	{
+		if (!SelectedObject) continue;
+
+		FString* PrefixFound = PrefixMap.Find(SelectedObject->GetClass());
+		if (!PrefixFound || PrefixFound->IsEmpty())
+		{
+			FText MsgTitle = FText::FromString(TEXT("Warning"));
+			FMessageDialog::Open(EAppMsgType::Ok, FText::FromString(TEXT("Failed to find prefix for class ") + SelectedObject->GetClass()->GetName()), &MsgTitle);
+			continue;;
+		}
+		else
+		{
+			FString OldName = SelectedObject->GetName();
+			if (OldName.StartsWith(*PrefixFound))
+			{
+				//If asset's original name already included prefix, we are not going to add it again
+				continue;
+			}
+			else
+			{
+				//Rename the asset with prefix
+				const FString NewNameWithPrefix = *PrefixFound + OldName;
+				UEditorUtilityLibrary::RenameAsset(SelectedObject, NewNameWithPrefix);
+				Counter++;
+			}
+		}
+	}
+	if (Counter > 0)
+	{
+		ShowNotifyInfo(TEXT("Successfully renamed") + FString::FromInt(Counter) + " assets");
+	}
+	
+}
+
 void UAutomationAssetAction::ShowNotifyInfo(const FString& Message)
 {
 	//Pop up notification UI

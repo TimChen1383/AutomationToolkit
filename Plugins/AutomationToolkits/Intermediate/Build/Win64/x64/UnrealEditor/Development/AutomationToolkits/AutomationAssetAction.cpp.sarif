@@ -47,6 +47,28 @@
                             }
                         }
                     ]
+                },
+                {
+                    "ruleId": "C4996",
+                    "message": {
+                        "text": "'FMessageDialog::Open': Use the overload of Open that takes the Title by-value. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///D:/UnrealProjects/SlatePractice/Plugins/AutomationToolkits/Source/AutomationToolkits/AssetAction/AutomationAssetAction.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///D:/UnrealProjects/SlatePractice/Plugins/AutomationToolkits/Source/AutomationToolkits/AssetAction/AutomationAssetAction.cpp"
+                                },
+                                "region": {
+                                    "startLine": 60,
+                                    "startColumn": 20
+                                }
+                            }
+                        }
+                    ]
                 }
             ],
             "tool": {
