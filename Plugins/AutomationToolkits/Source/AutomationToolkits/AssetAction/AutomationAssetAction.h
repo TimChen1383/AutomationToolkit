@@ -16,5 +16,9 @@ class AUTOMATIONTOOLKITS_API UAutomationAssetAction : public UAssetActionUtility
 
 public:
 	UFUNCTION(CallInEditor)
-	void TestFunc();
+	//If there isn't any input parameter, the script will execute directly
+	//If there are 1 or 2 input parameters, the script will pop up a panel for user to fill on the input
+	void DuplicateAssets(int32 NumberOfDuplicate);
+
+	void ShowNotifyInfo(const FString& Message);
 };

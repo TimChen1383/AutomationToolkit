@@ -16,42 +16,61 @@ BLUTILITY_API UClass* Z_Construct_UClass_UAssetActionUtility();
 UPackage* Z_Construct_UPackage__Script_AutomationToolkits();
 // End Cross Module References
 
-// Begin Class UAutomationAssetAction Function TestFunc
-struct Z_Construct_UFunction_UAutomationAssetAction_TestFunc_Statics
+// Begin Class UAutomationAssetAction Function DuplicateAssets
+struct Z_Construct_UFunction_UAutomationAssetAction_DuplicateAssets_Statics
 {
+	struct AutomationAssetAction_eventDuplicateAssets_Parms
+	{
+		int32 NumberOfDuplicate;
+	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "CallInEditor", "true" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//If there isn't any input parameter, the script will execute directly\n//If there are 1 or 2 input parameters, the script will pop up a panel for user to fill on the input\n" },
+#endif
 		{ "ModuleRelativePath", "AssetAction/AutomationAssetAction.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "If there isn't any input parameter, the script will execute directly\nIf there are 1 or 2 input parameters, the script will pop up a panel for user to fill on the input" },
+#endif
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_NumberOfDuplicate;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UAutomationAssetAction_TestFunc_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAutomationAssetAction, nullptr, "TestFunc", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UAutomationAssetAction_TestFunc_Statics::Function_MetaDataParams), Z_Construct_UFunction_UAutomationAssetAction_TestFunc_Statics::Function_MetaDataParams) };
-UFunction* Z_Construct_UFunction_UAutomationAssetAction_TestFunc()
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UAutomationAssetAction_DuplicateAssets_Statics::NewProp_NumberOfDuplicate = { "NumberOfDuplicate", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AutomationAssetAction_eventDuplicateAssets_Parms, NumberOfDuplicate), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UAutomationAssetAction_DuplicateAssets_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UAutomationAssetAction_DuplicateAssets_Statics::NewProp_NumberOfDuplicate,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UAutomationAssetAction_DuplicateAssets_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UAutomationAssetAction_DuplicateAssets_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAutomationAssetAction, nullptr, "DuplicateAssets", nullptr, nullptr, Z_Construct_UFunction_UAutomationAssetAction_DuplicateAssets_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UAutomationAssetAction_DuplicateAssets_Statics::PropPointers), sizeof(Z_Construct_UFunction_UAutomationAssetAction_DuplicateAssets_Statics::AutomationAssetAction_eventDuplicateAssets_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UAutomationAssetAction_DuplicateAssets_Statics::Function_MetaDataParams), Z_Construct_UFunction_UAutomationAssetAction_DuplicateAssets_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UAutomationAssetAction_DuplicateAssets_Statics::AutomationAssetAction_eventDuplicateAssets_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UAutomationAssetAction_DuplicateAssets()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UAutomationAssetAction_TestFunc_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UAutomationAssetAction_DuplicateAssets_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(UAutomationAssetAction::execTestFunc)
+DEFINE_FUNCTION(UAutomationAssetAction::execDuplicateAssets)
 {
+	P_GET_PROPERTY(FIntProperty,Z_Param_NumberOfDuplicate);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->TestFunc();
+	P_THIS->DuplicateAssets(Z_Param_NumberOfDuplicate);
 	P_NATIVE_END;
 }
-// End Class UAutomationAssetAction Function TestFunc
+// End Class UAutomationAssetAction Function DuplicateAssets
 
 // Begin Class UAutomationAssetAction
 void UAutomationAssetAction::StaticRegisterNativesUAutomationAssetAction()
 {
 	UClass* Class = UAutomationAssetAction::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "TestFunc", &UAutomationAssetAction::execTestFunc },
+		{ "DuplicateAssets", &UAutomationAssetAction::execDuplicateAssets },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -74,7 +93,7 @@ struct Z_Construct_UClass_UAutomationAssetAction_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UAutomationAssetAction_TestFunc, "TestFunc" }, // 1945085710
+		{ &Z_Construct_UFunction_UAutomationAssetAction_DuplicateAssets, "DuplicateAssets" }, // 1276126728
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -123,10 +142,10 @@ UAutomationAssetAction::~UAutomationAssetAction() {}
 struct Z_CompiledInDeferFile_FID_UnrealProjects_SlatePractice_Plugins_AutomationToolkits_Source_AutomationToolkits_AssetAction_AutomationAssetAction_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UAutomationAssetAction, UAutomationAssetAction::StaticClass, TEXT("UAutomationAssetAction"), &Z_Registration_Info_UClass_UAutomationAssetAction, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAutomationAssetAction), 96600470U) },
+		{ Z_Construct_UClass_UAutomationAssetAction, UAutomationAssetAction::StaticClass, TEXT("UAutomationAssetAction"), &Z_Registration_Info_UClass_UAutomationAssetAction, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAutomationAssetAction), 1971808661U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_SlatePractice_Plugins_AutomationToolkits_Source_AutomationToolkits_AssetAction_AutomationAssetAction_h_1161077140(TEXT("/Script/AutomationToolkits"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_SlatePractice_Plugins_AutomationToolkits_Source_AutomationToolkits_AssetAction_AutomationAssetAction_h_3166204973(TEXT("/Script/AutomationToolkits"),
 	Z_CompiledInDeferFile_FID_UnrealProjects_SlatePractice_Plugins_AutomationToolkits_Source_AutomationToolkits_AssetAction_AutomationAssetAction_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_SlatePractice_Plugins_AutomationToolkits_Source_AutomationToolkits_AssetAction_AutomationAssetAction_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

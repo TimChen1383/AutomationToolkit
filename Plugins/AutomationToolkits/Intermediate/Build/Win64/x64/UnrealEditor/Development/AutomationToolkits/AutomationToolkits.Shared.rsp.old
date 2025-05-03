@@ -289,6 +289,9 @@
 /I "D:\UnrealProjects\SlatePractice\Plugins\AutomationToolkits\Intermediate\Build\Win64\UnrealEditor\Inc\AutomationToolkits\UHT"
 /I "D:\UnrealProjects\SlatePractice\Plugins\AutomationToolkits\Source"
 /I "D:\UnrealProjects\SlatePractice\Plugins\AutomationToolkits\Source\AutomationToolkits\Public"
+/I "..\Intermediate\Build\Win64\UnrealEditor\Inc\Blutility\UHT"
+/I "Editor\Blutility\Classes"
+/I "Editor\Blutility\Public"
 /external:W0
 /external:I "ThirdParty\GuidelinesSupportLibrary\GSL-1144\include"
 /external:I "ThirdParty\RapidJSON\1.1.0"
