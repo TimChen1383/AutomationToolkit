@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AutomationToolkits.cpp.obj": [
+			"AutomationAssetAction.gen.cpp.obj",
+			"AutomationToolkits.init.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"AutomationAssetAction.cpp.obj",
+			"AutomationToolkits.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-AutomationToolkits.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\UnrealProjects\SlatePractice\Intermediate\Build\Win64\x64\SlatePracticeEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"D:\UnrealProjects\SlatePractice\Plugins\AutomationToolkits\Intermediate\Build\Win64\x64\UnrealEditor\Development\AutomationToolkits\Module.AutomationToolkits.cpp.obj"
+"D:\UnrealProjects\SlatePractice\Plugins\AutomationToolkits\Intermediate\Build\Win64\x64\UnrealEditor\Development\AutomationToolkits\AutomationToolkits.cpp.obj"
+"D:\UnrealProjects\SlatePractice\Plugins\AutomationToolkits\Intermediate\Build\Win64\x64\UnrealEditor\Development\AutomationToolkits\Default.rc2.res"
+/OUT:"D:\UnrealProjects\SlatePractice\Plugins\AutomationToolkits\Intermediate\Build\Win64\x64\UnrealEditor\Development\AutomationToolkits\UnrealEditor-AutomationToolkits.lib"
