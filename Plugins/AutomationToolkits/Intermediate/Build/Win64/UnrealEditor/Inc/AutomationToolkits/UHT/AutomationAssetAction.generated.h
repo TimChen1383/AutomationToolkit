@@ -15,6 +15,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define AUTOMATIONTOOLKITS_AutomationAssetAction_generated_h
 
 #define FID_UnrealProjects_SlatePractice_Plugins_AutomationToolkits_Source_AutomationToolkits_AssetAction_AutomationAssetAction_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execRemoveUnusedAssets); \
 	DECLARE_FUNCTION(execAddPrefixes); \
 	DECLARE_FUNCTION(execDuplicateAssets);
 

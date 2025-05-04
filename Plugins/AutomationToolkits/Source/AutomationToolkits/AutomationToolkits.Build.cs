@@ -30,6 +30,7 @@ public class AutomationToolkits : ModuleRules
 				"EditorScriptingUtilities",
 				"UMG",
 				"Niagara",
+				"UnrealEd",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);

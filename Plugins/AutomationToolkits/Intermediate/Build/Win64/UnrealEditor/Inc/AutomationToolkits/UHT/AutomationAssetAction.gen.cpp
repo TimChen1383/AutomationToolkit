@@ -101,6 +101,42 @@ DEFINE_FUNCTION(UAutomationAssetAction::execDuplicateAssets)
 }
 // End Class UAutomationAssetAction Function DuplicateAssets
 
+// Begin Class UAutomationAssetAction Function RemoveUnusedAssets
+struct Z_Construct_UFunction_UAutomationAssetAction_RemoveUnusedAssets_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "CallInEditor", "true" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//Removed unused assets. Based on asset's reference\n" },
+#endif
+		{ "ModuleRelativePath", "AssetAction/AutomationAssetAction.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Removed unused assets. Based on asset's reference" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UAutomationAssetAction_RemoveUnusedAssets_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UAutomationAssetAction, nullptr, "RemoveUnusedAssets", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UAutomationAssetAction_RemoveUnusedAssets_Statics::Function_MetaDataParams), Z_Construct_UFunction_UAutomationAssetAction_RemoveUnusedAssets_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UAutomationAssetAction_RemoveUnusedAssets()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UAutomationAssetAction_RemoveUnusedAssets_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UAutomationAssetAction::execRemoveUnusedAssets)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RemoveUnusedAssets();
+	P_NATIVE_END;
+}
+// End Class UAutomationAssetAction Function RemoveUnusedAssets
+
 // Begin Class UAutomationAssetAction
 void UAutomationAssetAction::StaticRegisterNativesUAutomationAssetAction()
 {
@@ -108,6 +144,7 @@ void UAutomationAssetAction::StaticRegisterNativesUAutomationAssetAction()
 	static const FNameNativePtrPair Funcs[] = {
 		{ "AddPrefixes", &UAutomationAssetAction::execAddPrefixes },
 		{ "DuplicateAssets", &UAutomationAssetAction::execDuplicateAssets },
+		{ "RemoveUnusedAssets", &UAutomationAssetAction::execRemoveUnusedAssets },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -132,6 +169,7 @@ struct Z_Construct_UClass_UAutomationAssetAction_Statics
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UAutomationAssetAction_AddPrefixes, "AddPrefixes" }, // 2866040553
 		{ &Z_Construct_UFunction_UAutomationAssetAction_DuplicateAssets, "DuplicateAssets" }, // 1276126728
+		{ &Z_Construct_UFunction_UAutomationAssetAction_RemoveUnusedAssets, "RemoveUnusedAssets" }, // 606153869
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -180,10 +218,10 @@ UAutomationAssetAction::~UAutomationAssetAction() {}
 struct Z_CompiledInDeferFile_FID_UnrealProjects_SlatePractice_Plugins_AutomationToolkits_Source_AutomationToolkits_AssetAction_AutomationAssetAction_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UAutomationAssetAction, UAutomationAssetAction::StaticClass, TEXT("UAutomationAssetAction"), &Z_Registration_Info_UClass_UAutomationAssetAction, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAutomationAssetAction), 2058044526U) },
+		{ Z_Construct_UClass_UAutomationAssetAction, UAutomationAssetAction::StaticClass, TEXT("UAutomationAssetAction"), &Z_Registration_Info_UClass_UAutomationAssetAction, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAutomationAssetAction), 1034109798U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_SlatePractice_Plugins_AutomationToolkits_Source_AutomationToolkits_AssetAction_AutomationAssetAction_h_1083215901(TEXT("/Script/AutomationToolkits"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_SlatePractice_Plugins_AutomationToolkits_Source_AutomationToolkits_AssetAction_AutomationAssetAction_h_625330678(TEXT("/Script/AutomationToolkits"),
 	Z_CompiledInDeferFile_FID_UnrealProjects_SlatePractice_Plugins_AutomationToolkits_Source_AutomationToolkits_AssetAction_AutomationAssetAction_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_SlatePractice_Plugins_AutomationToolkits_Source_AutomationToolkits_AssetAction_AutomationAssetAction_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

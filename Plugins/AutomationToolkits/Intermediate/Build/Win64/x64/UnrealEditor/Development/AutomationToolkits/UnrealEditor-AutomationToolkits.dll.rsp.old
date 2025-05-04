@@ -36,6 +36,7 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN:6
 /NOIMPLIB
+/NATVIS:"..\Plugins\FX\Niagara\Intermediate\Build\Win64\x64\UnrealEditor\Development\Niagara\Niagara.natvis"
 "D:\UnrealProjects\SlatePractice\Intermediate\Build\Win64\x64\SlatePracticeEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
 "D:\UnrealProjects\SlatePractice\Plugins\AutomationToolkits\Intermediate\Build\Win64\x64\UnrealEditor\Development\AutomationToolkits\Module.AutomationToolkits.cpp.obj"
 "D:\UnrealProjects\SlatePractice\Plugins\AutomationToolkits\Intermediate\Build\Win64\x64\UnrealEditor\Development\AutomationToolkits\AutomationAssetAction.cpp.obj"
@@ -48,6 +49,8 @@
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Core\UnrealEditor-Core.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Blutility\UnrealEditor-Blutility.lib"
 "..\Plugins\Editor\EditorScriptingUtilities\Intermediate\Build\Win64\x64\UnrealEditor\Development\EditorScriptingUtilities\UnrealEditor-EditorScriptingUtilities.lib"
+"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\UMG\UnrealEditor-UMG.lib"
+"..\Plugins\FX\Niagara\Intermediate\Build\Win64\x64\UnrealEditor\Development\Niagara\UnrealEditor-Niagara.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"

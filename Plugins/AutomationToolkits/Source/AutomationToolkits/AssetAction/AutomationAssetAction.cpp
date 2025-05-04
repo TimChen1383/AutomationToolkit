@@ -6,6 +6,7 @@
 #include "EditorAssetLibrary.h"
 #include "Widgets/Notifications/SNotificationList.h"
 #include "Framework/Notifications/NotificationManager.h"
+#include "ObjectTools.h"
 
 void UAutomationAssetAction::DuplicateAssets(int32 NumberOfDuplicate)
 {
@@ -58,7 +59,7 @@ void UAutomationAssetAction::AddPrefixes()
 		{
 			FText MsgTitle = FText::FromString(TEXT("Warning"));
 			FMessageDialog::Open(EAppMsgType::Ok, FText::FromString(TEXT("Failed to find prefix for class ") + SelectedObject->GetClass()->GetName()), &MsgTitle);
-			continue;;
+			continue;
 		}
 		else
 		{
@@ -82,6 +83,37 @@ void UAutomationAssetAction::AddPrefixes()
 		ShowNotifyInfo(TEXT("Successfully renamed") + FString::FromInt(Counter) + " assets");
 	}
 	
+}
+
+void UAutomationAssetAction::RemoveUnusedAssets()
+{
+	TArray<FAssetData> SelectedAssetsData = UEditorUtilityLibrary::GetSelectedAssetData();
+	TArray<FAssetData> UnusedAssetsData;
+	for (const FAssetData& SelectedAssetData : SelectedAssetsData)
+	{
+		//Store the asset path in array and cout the number
+		TArray<FString> AssetReferencers = 
+		UEditorAssetLibrary::FindPackageReferencersForAsset(SelectedAssetData.ObjectPath.ToString());
+		
+		if (AssetReferencers.Num()==0)
+		{
+			UnusedAssetsData.Add(SelectedAssetData);
+		}
+	}
+	//All the selected asset are in used
+	if (UnusedAssetsData.Num() == 0)
+	{
+		FText MsgTitle = FText::FromString(TEXT("Warning"));
+		FMessageDialog::Open(EAppMsgType::Ok, FText::FromString(TEXT("No unused asset found among selected assets ")), &MsgTitle);
+		return;
+	}
+	//Unused assets been found in selected assets. Delete assets
+	else
+	{
+		const int32 NumOfAssetDeleted = ObjectTools::DeleteAssets(UnusedAssetsData);
+		if (NumOfAssetDeleted == 0) return;
+		ShowNotifyInfo(TEXT("Successfully deleted " + FString::FromInt(NumOfAssetDeleted) + TEXT(" unused assets")));
+	}
 }
 
 void UAutomationAssetAction::ShowNotifyInfo(const FString& Message)

@@ -32,6 +32,10 @@ public:
 	//Add prefixes to the name of the assets. Based on the asset type
 	UFUNCTION(CallInEditor)
 	void AddPrefixes();
+
+	//Removed unused assets. Based on asset's reference
+	UFUNCTION(CallInEditor)
+	void RemoveUnusedAssets();
 	
 	void ShowNotifyInfo(const FString& Message);
 

@@ -175,7 +175,10 @@
             "d:\\unreal\\ue_5.5\\engine\\source\\runtime\\slate\\public\\widgets\\notifications\\snotificationlist.h",
             "d:\\unreal\\ue_5.5\\engine\\source\\runtime\\slate\\public\\framework\\notifications\\notificationmanager.h",
             "d:\\unreal\\ue_5.5\\engine\\source\\runtime\\core\\public\\misc\\coreasynctasknotificationimpl.h",
-            "d:\\unreal\\ue_5.5\\engine\\source\\runtime\\core\\public\\misc\\asynctasknotification.h"
+            "d:\\unreal\\ue_5.5\\engine\\source\\runtime\\core\\public\\misc\\asynctasknotification.h",
+            "d:\\unreal\\ue_5.5\\engine\\source\\editor\\unrealed\\public\\objecttools.h",
+            "d:\\unreal\\ue_5.5\\engine\\source\\developer\\collectionmanager\\public\\collectionmanagertypes.h",
+            "d:\\unreal\\ue_5.5\\engine\\source\\developer\\sourcecontrol\\public\\isourcecontrolstate.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
