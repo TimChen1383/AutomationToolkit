@@ -7,6 +7,9 @@
 #include "Widgets/Notifications/SNotificationList.h"
 #include "Framework/Notifications/NotificationManager.h"
 #include "ObjectTools.h"
+#include "AssetRegistry/AssetRegistryModule.h"
+#include "AssetToolsModule.h"
+
 
 void UAutomationAssetAction::DuplicateAssets(int32 NumberOfDuplicate)
 {
@@ -89,6 +92,7 @@ void UAutomationAssetAction::RemoveUnusedAssets()
 {
 	TArray<FAssetData> SelectedAssetsData = UEditorUtilityLibrary::GetSelectedAssetData();
 	TArray<FAssetData> UnusedAssetsData;
+	FixUpRedirectors();
 	for (const FAssetData& SelectedAssetData : SelectedAssetsData)
 	{
 		//Store the asset path in array and cout the number
@@ -124,3 +128,43 @@ void UAutomationAssetAction::ShowNotifyInfo(const FString& Message)
 	NotifyInfo.FadeOutDuration = 7.0f;
 	FSlateNotificationManager::Get().AddNotification(NotifyInfo);
 }
+
+void UAutomationAssetAction::FixUpRedirectors()
+{
+	//Find asset's Redirectors 
+	TArray<UObjectRedirector*> RedirectorsToFixArray;
+	FAssetRegistryModule& AssetRegistryModule = 
+	FModuleManager::Get().LoadModuleChecked<FAssetRegistryModule>("AssetRegistry"); //Use the function from other module
+	FARFilter Filter; //Set up filter
+	Filter.bRecursivePaths = true;
+	Filter.PackagePaths.Emplace("/Game");
+	Filter.ClassNames.Emplace("ObjectRedirector");
+	TArray<FAssetData> OutRedirectors;
+	AssetRegistryModule.Get().GetAssets(Filter, OutRedirectors);
+	for (const FAssetData& RedirectorData : OutRedirectors)
+	{
+		if (UObjectRedirector* RedirectorToFix = Cast<UObjectRedirector>(RedirectorData.GetAsset())) //Find Redirectors
+		{
+			//Store all the filtered Redirectors in this array
+			RedirectorsToFixArray.Add(RedirectorToFix);
+		}
+	}
+
+	//Start fixing Redirectors
+	FAssetToolsModule& AssetToolsModule =
+	FModuleManager::LoadModuleChecked<FAssetToolsModule>(TEXT("AssetTools"));
+	AssetToolsModule.Get().FixupReferencers(RedirectorsToFixArray);
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+

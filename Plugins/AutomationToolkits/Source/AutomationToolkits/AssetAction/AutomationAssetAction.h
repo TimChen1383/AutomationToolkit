@@ -56,7 +56,7 @@ private:
 		{USkeletalMeshComponent::StaticClass(),TEXT("SK_")},
 		{UNiagaraSystem::StaticClass(),TEXT("NS_")},
 		{UNiagaraEmitter::StaticClass(),TEXT("NE_")},
-		
-		
 	};
+
+	void FixUpRedirectors();
 };

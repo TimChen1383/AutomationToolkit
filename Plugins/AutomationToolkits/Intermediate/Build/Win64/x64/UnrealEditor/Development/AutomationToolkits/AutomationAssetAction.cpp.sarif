@@ -19,7 +19,7 @@
                                     "uri": "file:///D:/UnrealProjects/SlatePractice/Plugins/AutomationToolkits/Source/AutomationToolkits/AssetAction/AutomationAssetAction.cpp"
                                 },
                                 "region": {
-                                    "startLine": 31,
+                                    "startLine": 34,
                                     "startColumn": 54
                                 }
                             }
@@ -41,7 +41,7 @@
                                     "uri": "file:///D:/UnrealProjects/SlatePractice/Plugins/AutomationToolkits/Source/AutomationToolkits/AssetAction/AutomationAssetAction.cpp"
                                 },
                                 "region": {
-                                    "startLine": 17,
+                                    "startLine": 20,
                                     "startColumn": 19
                                 }
                             }
@@ -63,7 +63,7 @@
                                     "uri": "file:///D:/UnrealProjects/SlatePractice/Plugins/AutomationToolkits/Source/AutomationToolkits/AssetAction/AutomationAssetAction.cpp"
                                 },
                                 "region": {
-                                    "startLine": 61,
+                                    "startLine": 64,
                                     "startColumn": 20
                                 }
                             }
@@ -85,7 +85,7 @@
                                     "uri": "file:///D:/UnrealProjects/SlatePractice/Plugins/AutomationToolkits/Source/AutomationToolkits/AssetAction/AutomationAssetAction.cpp"
                                 },
                                 "region": {
-                                    "startLine": 96,
+                                    "startLine": 100,
                                     "startColumn": 72
                                 }
                             }
@@ -107,8 +107,30 @@
                                     "uri": "file:///D:/UnrealProjects/SlatePractice/Plugins/AutomationToolkits/Source/AutomationToolkits/AssetAction/AutomationAssetAction.cpp"
                                 },
                                 "region": {
-                                    "startLine": 107,
+                                    "startLine": 111,
                                     "startColumn": 19
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ruleId": "C4996",
+                    "message": {
+                        "text": "'FARFilter::ClassNames': Class names are now represented by path names. Please use ClassPaths. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile."
+                    },
+                    "analysisTarget": {
+                        "uri": "file:///D:/UnrealProjects/SlatePractice/Plugins/AutomationToolkits/Source/AutomationToolkits/AssetAction/AutomationAssetAction.cpp"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:///D:/UnrealProjects/SlatePractice/Plugins/AutomationToolkits/Source/AutomationToolkits/AssetAction/AutomationAssetAction.cpp"
+                                },
+                                "region": {
+                                    "startLine": 141,
+                                    "startColumn": 8
                                 }
                             }
                         }

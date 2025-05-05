@@ -51,6 +51,7 @@
 "..\Plugins\Editor\EditorScriptingUtilities\Intermediate\Build\Win64\x64\UnrealEditor\Development\EditorScriptingUtilities\UnrealEditor-EditorScriptingUtilities.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\UMG\UnrealEditor-UMG.lib"
 "..\Plugins\FX\Niagara\Intermediate\Build\Win64\x64\UnrealEditor\Development\Niagara\UnrealEditor-Niagara.lib"
+"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\UnrealEd\UnrealEditor-UnrealEd.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"
