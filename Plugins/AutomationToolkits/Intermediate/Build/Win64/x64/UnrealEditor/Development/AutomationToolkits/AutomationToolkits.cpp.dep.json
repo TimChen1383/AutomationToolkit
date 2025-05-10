@@ -6,7 +6,26 @@
         "PCH": "d:\\unrealprojects\\slatepractice\\intermediate\\build\\win64\\x64\\slatepracticeeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
             "d:\\unrealprojects\\slatepractice\\plugins\\automationtoolkits\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\automationtoolkits\\definitions.automationtoolkits.h",
-            "d:\\unrealprojects\\slatepractice\\plugins\\automationtoolkits\\source\\automationtoolkits\\public\\automationtoolkits.h"
+            "d:\\unrealprojects\\slatepractice\\plugins\\automationtoolkits\\source\\automationtoolkits\\public\\automationtoolkits.h",
+            "d:\\unreal\\ue_5.5\\engine\\source\\editor\\contentbrowser\\public\\contentbrowsermodule.h",
+            "d:\\unreal\\ue_5.5\\engine\\source\\editor\\contentbrowser\\public\\contentbrowserdelegates.h",
+            "d:\\unreal\\ue_5.5\\engine\\source\\developer\\assettools\\public\\iassettypeactions.h",
+            "d:\\unreal\\ue_5.5\\engine\\source\\developer\\merge\\public\\merge.h",
+            "d:\\unreal\\ue_5.5\\engine\\source\\editor\\unrealed\\classes\\thumbnailrendering\\thumbnailmanager.h",
+            "d:\\unreal\\ue_5.5\\engine\\source\\editor\\unrealed\\classes\\thumbnailrendering\\thumbnailrenderer.h",
+            "d:\\unreal\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\uht\\thumbnailrenderer.generated.h",
+            "d:\\unreal\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\uht\\thumbnailmanager.generated.h",
+            "d:\\unreal\\ue_5.5\\engine\\source\\editor\\contentbrowserdata\\public\\contentbrowserdatalegacybridge.h",
+            "d:\\unreal\\ue_5.5\\engine\\source\\editor\\contentbrowserdata\\public\\contentbrowserdatamenucontexts.h",
+            "d:\\unreal\\ue_5.5\\engine\\source\\editor\\contentbrowserdata\\public\\contentbrowseritem.h",
+            "d:\\unreal\\ue_5.5\\engine\\source\\editor\\contentbrowserdata\\public\\contentbrowseritemdata.h",
+            "d:\\unreal\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\contentbrowserdata\\uht\\contentbrowseritem.generated.h",
+            "d:\\unreal\\ue_5.5\\engine\\source\\developer\\collectionmanager\\public\\collectionmanagertypes.h",
+            "d:\\unreal\\ue_5.5\\engine\\source\\developer\\sourcecontrol\\public\\isourcecontrolstate.h",
+            "d:\\unreal\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\contentbrowserdata\\uht\\contentbrowserdatamenucontexts.generated.h",
+            "d:\\unreal\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\contentbrowserdata\\uht\\contentbrowserdatalegacybridge.generated.h",
+            "d:\\unreal\\ue_5.5\\engine\\source\\editor\\contentbrowser\\public\\experimental\\contentbrowserviewextender.h",
+            "d:\\unreal\\ue_5.5\\engine\\source\\editor\\contentbrowser\\public\\assetviewtypes.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
